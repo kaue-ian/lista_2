@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+
+    const peso = Number(prompt("Insira o seu peso em kg").replace(".",",").trim());
+    const altura = Number(prompt("Insira sua altura em centímetros"));
+    const altura02 = altura / 100
+    const imc = (peso / altura02 ** 2);
+
+    if (imc <= 18.5) {
+        document.write(`Subpeso`);
+    }
+    else if (imc <= 25) {
+        document.write(`Normal`);
+    }
+    else if (imc <= 30) {
+        document.write(`Sobrepeso`);
+    }
+    else if (imc > 30) {
+        document.write(`Obeso`);
+    }
+    //
+
+</script>

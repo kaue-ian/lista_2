@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<script>
+
+    const num1 = Number(prompt("Informe  um número inteiro").trim().replace(",", "."));
+    const num2 = Number(prompt("Informe outro número inteiro").trim().replace(",", "."));
+    const operacao = prompt("Qual operação você deseja realizar (adição: +), (subtração: -), (divisão: /), (multiplicação: *)");
+    let operesult = 0;
+
+    if (operacao === "+" || operacao === "-" || operacao === "*" || operacao === "/") {
+
+        if (operacao == "+") {
+            operesult = num1 + num2
+        }
+        else if (operacao == "-") {
+            operesult = num1 - num2
+        }
+        else if (operacao == "*") {
+            operesult = num1 * num2
+        }
+        else if (operacao == "/") {
+            operesult = num1 / num2
+        }       
+        if (operesult >= 0 && operesult % 2 === 0 && Number.isInteger(operesult)) {
+            alert(`O número ${operesult} é Par, Positivo e Inteiro`);
+        }
+        else if (operesult < 0 && operesult % 2 === 0 && Number.isInteger(operesult)) {
+            alert(`O número ${operesult} é Par, Negativo e Inteiro`);
+        }
+        else if (operesult >= 0 && operesult % 2 === 0 && !Number.isInteger(operesult)) {
+            alert(`O número ${operesult.toFixed(1).replace(".",",")} é Par, Positivo e Decimal`);
+        }
+        else if (operesult < 0 && operesult % 2 === 0 && !Number.isInteger(operesult)) {
+            alert(`O número ${operesult.toFixed(1).replace(".",",")} é Par, Negativo e Decimal`);
+        }
+        else if (operesult >= 0 && !operesult % 2 === 0 && Number.isInteger(operesult)) {
+            alert(`O número ${operesult} é Ímpar, Positivo e Inteiro`);
+        }
+        else if (operesult < 0 && !operesult % 2 === 0 && Number.isInteger(operesult)) {
+            alert(`O número ${operesult} é Ímpar, Negativo e Inteiro`);
+        }
+        else if (operesult >= 0 && !operesult % 2 === 0 && !Number.isInteger(operesult)) {
+            alert(`O número ${operesult.toFixed(1).replace(".",",")} é Ímpar, Positivo e Decimal`);
+        }
+
+        else if (operesult < 0 && operesult % 2 === 0 && !Number.isInteger(operesult)) {
+            alert(`O número ${operesult.toFixed(1).replace(".",",")} é Ímpar, Negativo e Decimal`);
+        }
+        
+} else {
+        alert("APENAS AS 4 OPERAÇÕES")
+    }
+    //
+
+</script>

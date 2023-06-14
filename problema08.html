@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+
+    const a = Number(prompt("Informe o primeiro lado do triângulo").trim().replace(".", ","));
+    const b = Number(prompt("Informe o segundo lado do triângulo").trim().replace(".", ","));
+    const c = Number(prompt("Informe o terceiro lado do triângulo").trim().replace(".", ","));
+
+    if (lado1 === lado2 && lado1 === base && lado2 === base) {
+        alert(`Este triângulo possui todos lados iguais, logo ele é EQUILATERO`);
+    } 
+    else if (lado1 === lado2 && lado2 != base) {
+        alert(`Os lados desse triângulo são iguais, mas sua base é diferente, logo ele é ISÓCELES`);
+    } 
+    else if (lado1 !== lado2 !== base) {
+        alert(`Este triângulo não tem nenhum lado igual, logo ele é ESCALENO`);
+    }
+    else {
+        alert(`Não forma m triângulo`);
+    }
+    //
+
+</script>
